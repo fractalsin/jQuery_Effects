@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Training</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="javascript/javascript.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <button id="first">First Effect</button>
+    <button id="second">Second Effect</button>
+    <button id="sizeup">SIZE UP</button>
+    <button id="sizedown">SIZE DOWN</button>
+    <button id="original">Original</button>
+    <div id="flex">
+      <div id="square1">Tekst</div>
+      <div id="square2">Tekst</div>
+    </div>
+    <script>
+  $(document).ready(function(){
+      $("#first").click(function(){
+          $("#square2").animate({
+              left: '350px',
+              height: '400px',
+              width: '400px',
+          });
+      });
+  });
+  $(document).ready(function(){
+      $("#first").click(function(){
+          $("#square1").animate({
+              left: '200px',
+              height: '100px',
+              width: '200px',
+          });
+      });
+  });
+  $(document).ready(function(){
+      $("#second").click(function(){
+          $("#square1").animate({
+              left: '200px',
+              height: '300px',
+              width: '400px',
+          });
+      });
+  });
+  $(document).ready(function(){
+      $("#second").click(function(){
+          $("#square2").animate({
+              left: '300px',
+              height: '550px',
+              width: '550px',
+          });
+      });
+  });
+  /* size + */
+  $(document).ready(function(){
+      $("#sizeup").click(function(){
+          $("#square1").animate({
+              left: '0px',
+              height: '+=100px',
+              width: '+=100px',
+          });
+      });
+  });
+  $(document).ready(function(){
+      $("#sizeup").click(function(){
+          $("#square2").animate({
+              left: '0px',
+              height: '+=100px',
+              width: '+=100px',
+          });
+      });
+  });
+  /* size - */
+  $(document).ready(function(){
+      $("#sizedown").click(function(){
+          $("#square2").animate({
+              left: '0px',
+              height: '-=100px',
+              width: '-=100px',
+          });
+      });
+  });
+  $(document).ready(function(){
+      $("#sizedown").click(function(){
+          $("#square1").animate({
+              left: '0px',
+              height: '-=100px',
+              width: '-=100px',
+          });
+      });
+  });
+  $(document).ready(function(){
+      $("#original").click(function(){
+          $("#square1").animate({
+              left: '0px',
+              height: '200px',
+              width: '200px',
+          });
+      });
+  });
+  $(document).ready(function(){
+      $("#original").click(function(){
+          $("#square2").animate({
+              height: '200px',
+              width: '200px',
+          });
+      });
+  });
+    </script>
+</body>
+</html>
